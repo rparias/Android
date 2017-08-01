@@ -40,6 +40,6 @@ public class MainActivity extends Activity {
     public void mostrarResultado(){
         //R.id.txtContador es la ruta en recursos del txt del contador
         TextView textoResultado = (TextView)findViewById(R.id.txtContador);
-        textoResultado.setText("Contador:" + contador);
+        textoResultado.setText(""+contador);
     }
 }
