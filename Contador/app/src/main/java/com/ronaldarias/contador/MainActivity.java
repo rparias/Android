@@ -3,6 +3,7 @@ package com.ronaldarias.contador;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -53,6 +54,12 @@ public class MainActivity extends Activity {
 
         numero_reset.setText("");
         textoResultado.setText("" + contador);
+
+        //almacena dentro de la instancia, el dispositivo que se usa para leer la informacion
+        InputMethodManager miTeclado = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+
+        //ocultar el teclado despues de escribir la casilla de texto del reset
+        miTeclado.hideSoftInputFromWindow(numero_reset.getWindowToken(), 0);
     }
 
     /*
