@@ -2,7 +2,9 @@ package com.ronaldarias.contador;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -22,6 +24,26 @@ public class MainActivity extends Activity {
         textoResultado = (TextView)findViewById(R.id.txtContador);
 
         contador = 0;
+
+        //poner a la escucha txtReseteo
+        EventoTeclado teclado = new EventoTeclado();
+        EditText n_reseteo = (EditText) findViewById(R.id.txtReseteo);
+        n_reseteo.setOnEditorActionListener(teclado);
+    }
+
+    //clase interna
+    class EventoTeclado implements TextView.OnEditorActionListener{
+
+        @Override
+        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+
+            //si se ha ocultado el teclado entonces llama a resetea
+            if(actionId== EditorInfo.IME_ACTION_DONE){
+                resetContador(null);
+            }
+
+            return false;
+        }
     }
 
     //metodo para incrementar
