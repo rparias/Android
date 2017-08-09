@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,12 +20,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /*
-        //----------------------------agregar un TextView mediante codigo java
-        TextView miTexto = new TextView(this);
+
+        //----------agregar un TextView mediante codigo java
+        /*TextView miTexto = new TextView(this);
         miTexto.setText("Hola Ronald");
-        setContentView(miTexto);    //vista que visualizará la actividad
-        */
+        setContentView(miTexto);    //vista que visualizará la actividad*/
+
+        //----------agregar un ImageView mediante codigo java
+        /*ImageView imagenApple = (ImageView) findViewById(R.id.imgApple);
+        imagenApple.setImageResource(R.drawable.apple);*/
     }
 
     @Override
