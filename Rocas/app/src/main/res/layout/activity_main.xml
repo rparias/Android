@@ -24,29 +24,30 @@
             android:textAppearance="@android:style/TextAppearance.Large" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnJugar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/inicio"
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnConfiguracion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/configurar" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnSalir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/salir" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnInformacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/d_adicional" />
+            android:text="@string/d_adicional"
+            android:onClick="ejecutar_info"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

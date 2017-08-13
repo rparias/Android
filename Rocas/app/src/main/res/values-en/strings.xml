@@ -6,4 +6,6 @@
     <string name="configurar">Configuration</string>
     <string name="salir">Exit</string>
     <string name="d_adicional">About</string>
+    <string name="etqInfo">Important Information</string>
+    <string name="etqProgramador">Programmer: Ronald Arias</string>
 </resources>
