@@ -17,4 +17,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, InformacionActivity.class);
         startActivity(intent);
     }
+
+    //metodo para salir de la app
+    public void salirApp(View view){
+        finish();
+    }
 }
