@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu miMenu){
+        //getMenuInflater coloca el menu
         getMenuInflater().inflate(R.menu.menu_en_activity, miMenu);
         return true;
     }
@@ -35,13 +36,14 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem opcion_menu){
         int id = opcion_menu.getItemId();
 
-        if(id == R.id.btnConfiguracion)
+        if(id == R.id.itmConfiguracion)
             return true;
-        if(id == R.id.btnInformacion){
+        if(id == R.id.itmInfo){
             ejecutar_info(null);
             return true;
         }
 
+        //si no entra solo devuelve una opcion de menu
         return super.onOptionsItemSelected(opcion_menu);
     }
 }
